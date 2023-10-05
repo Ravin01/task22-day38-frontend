@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { backendUrl } from "../config";
 import { getData } from "../crud";
+import './createPost.css'
 
 const CreatePost = () => {
   const [formData, setFormData] = useState({

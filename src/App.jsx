@@ -1,5 +1,5 @@
 import CreatePost from "../Components/CreatePost";
-import Post from "../Components/post";
+import Post from "../Components/Post";
 import "./App.css";
 
 function App() {

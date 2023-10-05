@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getData } from "../crud";
 import { useEffect } from "react";
+import './post.css'
 
 const Post = () => {
   const [data, setData] = useState([]);
