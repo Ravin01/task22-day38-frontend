@@ -11,7 +11,7 @@ const Post = () => {
   };
   useEffect(() => {
     getPost();
-  }, []);
+  }, [data]);
   return (
     <div style={{
         height : '70vh'

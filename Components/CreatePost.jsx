@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { backendUrl } from "../config";
-import { getData } from "../crud";
-import './createPost.css'
+import "./createPost.css";
 
 const CreatePost = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +17,7 @@ const CreatePost = () => {
   };
   const handleSubmit = async (ele) => {
     ele.preventDefault();
-    console.log(formData);
-    // await createPost(setFormData);
+    // await createPost(formData);
     await fetch(backendUrl, {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -27,16 +25,17 @@ const CreatePost = () => {
         'Content-Type': 'application/json',
       },
     });
-    await getData()
+    // await getData()
     setFormData({
       postName: "",
       imageUrl: "",
       comments: "",
     });
+    ele.reset();
   };
   return (
     <div>
-        <h3>Create post : </h3>
+      <h3>Create post : </h3>
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="postName">Post Name : </label>
         <input
@@ -68,7 +67,7 @@ const CreatePost = () => {
           value={formData.comments}
         />
         <br />
-        <button type="submit">Submit</button> 
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

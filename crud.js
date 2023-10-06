@@ -3,7 +3,7 @@ import { backendUrl } from "./config";
 export const getData = async () => {
   let response = await fetch(backendUrl);
   let data = await response.json();
-  console.log(data);
+//   console.log(data);
   return data;
 };
 
@@ -17,6 +17,6 @@ export const createPost = async(data)=>{
         }
     });
     const newData = await response.json()
-    console.log(newData)
+    // console.log(newData)
     return newData
 }
